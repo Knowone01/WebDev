@@ -1,0 +1,93 @@
+ /* base setting for the whole project */
+:root {
+    --bg-color: #f4f4f5;
+    --text-color: #18181b;
+    --card-bg: #ffffff;
+    --button-hover: #e4e4e7;
+}
+
+/* .{class name}  will be applied to all classes whose name is dark-mode*/
+.dark-mode{
+    --bg-color: #18181b;
+    --text-color: #f4f4f5;
+    --card-bg: #27272a;
+    --button-hover: #3f3f46
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+   
+    min-height: 100vh;
+    
+    margin: 0;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.container{
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 40px;
+    /* Space INSIDE the box */
+    border-radius: 16px;
+    /* Rounded corners */
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* Turns a square image into a perfect circle */
+    object-fit: cover;
+    /* Prevents the image from squishing */
+    margin-bottom: 16px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    /* Stacks the links vertically instead of side-by-side */
+    gap: 16px;
+    /* Adds exactly 16px of space between each link */
+    margin-top: 24px;
+}
+
+.link{
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    /* Removes the default blue underline from links */
+    font-weight: bold;
+    border-radius: 8px;
+
+    /* This prepares the button for the hover animation */
+    transition: all 0.2s ease-in-out;
+}
+
+.links :hover{
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+    /* Makes the button slightly bigger */
+}
+
+#theme-toggle{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
