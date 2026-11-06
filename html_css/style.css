@@ -81,6 +81,16 @@ body{
     transform: scale(1.05);
     /* Makes the button slightly bigger */
 }
+/*
+:hover is a CSS pseudo-class that applies styles when the
+mouse pointer is over an element.
+
+.link       → Normal styling of the link.
+.link:hover → Styling when the link is hovered.
+
+Note: A space in ".links :hover" targets hovered descendants,
+while ".links:hover" targets the container itself.
+*/
 
 #theme-toggle{
     background: none;
